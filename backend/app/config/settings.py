@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Defense & Detachment Asset Management API"
     VERSION: str = "2.0.0"
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./app.db")
+    DATABASE_URL: str = "postgresql+psycopg2://postgres:admin@localhost:5432/ARCGIS"
     CORS_ORIGINS: list[str] = ["*"]
 
     class Config:
